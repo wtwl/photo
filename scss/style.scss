@@ -1,0 +1,77 @@
+@import './normalize';
+@import './fonts';
+@import './base';
+@import './mixins';
+
+.header__logo {
+    text-align: center;
+    padding: 1em 0;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.sort {
+    
+    @include flex(column);
+
+    label {
+        padding: 10px 0 5px;    
+    }
+
+    &__item {
+        @include flex(column);
+        width: 100%;
+        margin: .5em;
+    }
+}
+
+input[class*="sort"],
+select[class*="sort"] {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: .7em 0;
+    width: 100%;
+    text-align: center;
+}
+
+[class*="photo-"] {
+    padding: 10px 5px;
+    text-align: left;
+}
+
+.grid {
+    @include flex(column);
+    &__item {
+        margin: .7em .5em;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        padding-bottom:  10px;
+        @include flex(column);
+        align-items: flex-start;
+    }
+
+    &__image {
+        width: 320px;
+        height: 320px;
+        max-width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+
+    .sort {
+        flex-direction: row;
+    }
+
+    .grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }   
+
+
+}

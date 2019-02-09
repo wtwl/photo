@@ -1,0 +1,86 @@
+@import url(./node_modules/normalize.css/normalize.css);
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+/* line 2, scss/_normalize.scss */
+html {
+  box-sizing: border-box; }
+
+/* line 6, scss/_normalize.scss */
+*:after,
+*:before {
+  box-sizing: inherit; }
+
+/* line 1, scss/_base.scss */
+body {
+  font-size: 16px;
+  font-family: 'Lato', Arial, Helvetica, sans-serif; }
+
+/* line 6, scss/style.scss */
+.header__logo {
+  text-align: center;
+  padding: 1em 0; }
+
+/* line 11, scss/style.scss */
+.wrapper {
+  width: 90%;
+  margin: 0 auto; }
+
+/* line 16, scss/style.scss */
+.sort {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  /* line 20, scss/style.scss */
+  .sort label {
+    padding: 10px 0 5px; }
+  /* line 24, scss/style.scss */
+  .sort__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: .5em; }
+
+/* line 31, scss/style.scss */
+input[class*="sort"],
+select[class*="sort"] {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: .7em 0;
+  width: 100%;
+  text-align: center; }
+
+/* line 40, scss/style.scss */
+[class*="photo-"] {
+  padding: 10px 5px;
+  text-align: left; }
+
+/* line 45, scss/style.scss */
+.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  /* line 47, scss/style.scss */
+  .grid__item {
+    margin: .7em .5em;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-start; }
+  /* line 56, scss/style.scss */
+  .grid__image {
+    width: 320px;
+    height: 320px;
+    max-width: 100%; }
+
+@media screen and (min-width: 769px) {
+  /* line 66, scss/style.scss */
+  .sort {
+    flex-direction: row; }
+  /* line 70, scss/style.scss */
+  .grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start; } }
